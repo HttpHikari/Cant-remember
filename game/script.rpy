@@ -1,5 +1,5 @@
 ﻿define p = Character("Protagonist", who_color="#c8ffc8")
-define t = Character("Taxidirver")
+define t = Character("Taxidriver")
 
 
 label start:
@@ -12,7 +12,7 @@ label start:
 
     p "I don't wanna think how much the trip is gonna be"
 
-    show Taxidirver at left
+    show Taxidriver at left
 
     t "It will be $150"
     p "Thank you, here is the total, check it to be sure"
