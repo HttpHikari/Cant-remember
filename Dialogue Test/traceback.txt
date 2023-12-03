@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 93, in script
+    P "If you were someone closer to him, you might understand all the pictures and history this little place has to tell."
+Exception: Sayer 'P' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 93, in script
+    P "If you were someone closer to him, you might understand all the pictures and history this little place has to tell."
+  File "C:\Users\Hikki\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 890, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Hikki\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 783, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'P' is not defined.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.1.3.23091805
+Dialogue Test 1.0
+Sun Dec  3 19:58:02 2023
