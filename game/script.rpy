@@ -1,5 +1,10 @@
 ﻿define p = Character("Protagonist", who_color="#c8ffc8")
 define t = Character("Taxidriver")
+image bg taxi back = "bg taxi back.jpg"
+image bg house front = "bg house front.jpg"
+image bg house livingroom = "bg house livingroom.jpg"
+image bg bedroom = "bg bedroom.jpg"
+image bg wardrobe = "bg wardrobe.jpg"
 
 
 label start:
