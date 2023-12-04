@@ -36,9 +36,7 @@ menu:
     "Check phone":
         "I almost forgot to tell Olie I am already here"
 
-label after_menu:
-
-    "Continue"
+label enter_house:
 
     scene bg house livingroom
 
@@ -50,84 +48,95 @@ label after_menu:
 
     show protagonist neutral at right
 
-    #The centerpiece |  The pictures on the wall | The showcase 
+label livingroom:
+    menu:
+        "Let´s see:"
 
-    "The centerpiece: "
-    p "I remember the days my aunt told me and my cousins to not touch this thing"
-    p "now I look at this and it's just a glass bowl with shiny rocks, nothing interesting anymore"
-    
-    "The pictures on the wall: "
-    p "Lots of nice memories frozen, some of them I can't recognize, parts of the family I didn't get to know"
+        "The centerpiece":
 
-    "The showcase: "
-    p "Cat shaped souvenirs from different cities around the world."
-    p "There are in so many colors and styles."
+            p "I remember the days my aunt told me and my cousins to not touch this thing"
+            p "now I look at this and it's just a glass bowl with shiny rocks, nothing interesting anymore"
+            jump livingroom
+        
+        "The pictures on the wall":
 
-    show protagonist smile at right
+            p "Lots of nice memories frozen, some of them I can't recognize, parts of the family I didn't get to know"
+            jump livingroom
 
-    p "These in particular make you smile."
+        "The showcase": 
 
-    "Continue"
+            p "Cat shaped souvenirs from different cities around the world."
+            p "There are in so many colors and styles."
 
-    "You decide it's time to look around the documents you have to get."
+            show protagonist smile at right
+
+            p "These in particular make you smile."
+
+label room_choice:
+
+    "After having some time to organize your thoughts"
+    "you decide it's time to look around the documents you have to get."
 
     p "Well even if I didn´t know him very well, I have the hunch he was the kind of old man who kept money under the couch and jewelry in a cardbox"
     p "Old man stuff"
 
-    "Where should I go first?"
+    menu:
+        "Where should I go first?"
+        "Bedroom":
+            scene bg bedroom
 
-    #Bedroom | Kitchen | Go outside
+            "The old curtains once white, now brown cause of the dust and humidity."
+            "Those worn walls."
 
-    scene bg bedroom
+            p "That little blue room"   #Aquel cuartito azul. Mención o algo así? 
+            p "Even after all these years, you are surprised how that nickname still sticks in your head."
 
-    "Bedroom: "
+            p "no need to investigate a lot here, I guess I know where to search"
 
-    "The old curtains once white, now brown cause of the dust and humidity."
-    "Those worn walls."
+            p "If you were someone closer to him, you might understand all the pictures and history this little place has to tell."
+            p "But you aren't."
 
-    p "The little blue room"   #Aquel cuartito azul. Mención o algo así? 
-    p "Even after all these years, you are surprised how that nickname still sticks in your head."
+            "Let's look in the wardrobe."
 
-    p "no need to investigate a lot here, I guess I know where to search"
+            scene bg wardrobe
 
-    p "If you were someone closer to him, you might understand all the pictures and history this little place has to tell."
-    p "But you aren't."
+            label wardrobe_choice:
+                menu:
+                    "Check hanging clothes":
+                        "You go through hanger to hanger inspecting all the pockets of each cloth."
+                        "You find a small wallet, with only the essentials."
 
-    "Let's look in the wardrobe."
+                        p "Two expired credit cards, some cash and an ID"
+                        p "It seems to be the most recent one, this should work"
+                        p "Now, where is the Birth Certificate?"
+                        jump wardrobe_choice
+                    "Check shoe boxes":
 
-    scene bg wardrobe
+                        "There are shoe boxes piled at the bottom of the wardrobe."
+                        "Most of them have their right pair of shoes, others have pictures."
 
-    #Check hanging clothes | Check shoe boxes | Check drawers
+                        p "Aaand it's here"
+                        p "Those were the essentials to start the legal procedure"
 
-    #Check hanging clothes:
+                        "Nothing good comes from personal interest and wanting money between the family, but you are on the road now."
 
-    "You go through hanger to hanger inspecting all the pockets of each cloth."
-    "You find a small wallet, with only the essentials."
+                        p "Whatever gets me out of these conflicts, this isn't even beneficial for me"
+                        p "The costs of the lawyer is almost the same amount of my heirloom"
 
-    p "Two expired credit cards, some cash and an ID"
-    p "It seems to be the most recent one, this should work"
-    p "Now, where is the Birth Certificate?"
+                        "sighs"
 
-    "Check shoe boxes:"
+                    "Check drawers":
 
-    "There are shoe boxes piled at the bottom of the wardrobe."
-    "Most of them have their right pair of shoes, others have pictures."
+                        "Lots of trinkets, nothing of interest here."
+                        jump wardrobe_choice
 
-    p "Aaand it's here"
-    p "Those were the essentials to start the legal procedure"
+        "Kitchen":
+            jump room_choice
 
-    "Nothing good comes from personal interest and wanting money between the family, but you are on the road now."
+        "Go outside":
+            jump room_choice
 
-    p "Whatever gets me out of these conflicts, this isn't even beneficial for me"
-    p "The costs of the lawyer is almost the same amount of my heirloom"
-
-    "sighs"
-
-    "Check drawers:"
-
-    "Lots of trinkets, nothing of interest here."
-
-    "Now i can go"
+            "Now i can go"
 
 
 
