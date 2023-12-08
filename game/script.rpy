@@ -1,16 +1,16 @@
-﻿define p = Character("Protagonist", who_color="#c8ffc8")
+﻿define p = Character("Protagonist", who_color="#728172")
 define t = Character("Taxidriver")
-image bg taxi back = "bg taxi back.jpg"
-image bg house front = "bg house front.jpg"
-image bg house livingroom = "bg house livingroom.jpg"
-image bg bedroom = "bg bedroom.jpg"
-image bg wardrobe = "bg wardrobe.jpg"
-
+image bg taxi back = im.Scale("bg taxi back.jpg",1920 ,1080 )
+image bg house front = im.Scale("bg house front.jpg",1920 ,1080 )
+image bg house livingroom = im.Scale("bg house livingroom.png",1920 ,1080 )
+image bg bedroom = im.Scale("bg bedroom.jpg",1920 ,1080 )
+image bg wardrobe = im.Scale("bg wardrobe.jpg",1920 ,1080 )
+image keys = im.Scale("keys.png", 200, 200)
 
 label start:
 
     scene bg taxi back
-
+    with fade
     "You've been traveling in a taxi for 15 minutes and you still haven't reached your destination."
 
     show protagonist neutral at right
@@ -23,23 +23,30 @@ label start:
     p "Thank you, here is the total, check it to be sure"
     t "You are welcome" 
 
-    scene bg house front
+    hide Taxidriver
+label house_outside:
 
     "When you get out of the car, the weight of the memories falls on you."
     "You didn't think the passage of time would be like this"
-
+    
+    scene bg house front
     show protagonist neutral at right
 
     p "Well, I need to be sure I have everything on hand"
 
+    show protagonist opened eyes at right
 menu:
     "What should i do?"
-
     "Check keys":
+        show keys:
+        xalign: 0.5
+        yalign: 1.0
         "Yes, I have both of my keys and the “sweet home” keys"
 
     "Check phone":
         "I almost forgot to tell Olie I am already here"
+    
+        
 
 label enter_house:
 
@@ -48,6 +55,8 @@ label enter_house:
     "At first glance when you enter you can see dust everywhere, but still tidy, still in those past days."
 
     show protagonist closed eyes at right
+    show protagonist opened eyes at right
+  
 
     "Since you have some time, take the opportunity to look around the place a little."
 
@@ -56,8 +65,9 @@ label enter_house:
 label livingroom:
     menu:
         "Let´s see:"
-
         "The centerpiece":
+
+            scene bg house livingroom
 
             p "I remember the days my aunt told me and my cousins to not touch this thing"
             p "now I look at this and it's just a glass bowl with shiny rocks, nothing interesting anymore"
@@ -73,12 +83,12 @@ label livingroom:
             p "Cat shaped souvenirs from different cities around the world."
             p "There are in so many colors and styles."
 
-            show protagonist smile at right
+            show protagonist smiles at right
 
             p "These in particular make you smile."
 
 label room_choice:
-
+    show protagonist opened eyes at right
     "After having some time to organize your thoughts"
     "you decide it's time to look around the documents you have to get."
 
@@ -93,14 +103,17 @@ label room_choice:
             "The old curtains once white, now brown cause of the dust and humidity."
             "Those worn walls."
 
+            show protagonist neutral at right
+
             p "That little blue room"   #Aquel cuartito azul. Mención o algo así? 
             p "Even after all these years, you are surprised how that nickname still sticks in your head."
 
             p "no need to investigate a lot here, I guess I know where to search"
-
+            
             p "If you were someone closer to him, you might understand all the pictures and history this little place has to tell."
+            show protagonist closed eyes at right
             p "But you aren't."
-
+            show protagonist opened eyes at right
             "Let's look in the wardrobe."
 
             scene bg wardrobe
