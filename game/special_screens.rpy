@@ -67,9 +67,9 @@ screen hoverable_wardrobe:
         ypos 0.28
         idle "cloth unhover.png"
         hover "cloth hovered.png"
-        action [Hide("displayTextScreen"),Jump("hoverable_wardrobe")]
+        action [Hide("displayTextScreen"),Jump("hanging_clothes")]
 
-        hovered Show("displayTextScreen", displayText = "Check hanging clothes!")
+        hovered Show("displayTextScreen", displayText = "Check hanging clothes")
         unhovered Hide("displayTextScreen")
     
     imagebutton:
@@ -79,7 +79,7 @@ screen hoverable_wardrobe:
         ypos 0.28
         idle "shoebox unhover.png"
         hover "shoebox hovered.png"
-        action [Hide("displayTextScreen"),Jump("hoverable_wardrobe")]
+        action [Hide("displayTextScreen"),Jump("shoeboxes")]
 
         hovered Show("displayTextScreen", displayText = "Check shoe boxes")
         unhovered Hide("displayTextScreen")
@@ -91,7 +91,7 @@ screen hoverable_wardrobe:
         ypos 0.28
         idle "drawer unhover.png"
         hover "drawer hovered.png"
-        action [Hide("displayTextScreen"),Jump("hoverable_wardrobe")]
+        action [Hide("displayTextScreen"),Jump("drawer")]
 
         hovered Show("displayTextScreen", displayText = "Check drawers")
         unhovered Hide("displayTextScreen")

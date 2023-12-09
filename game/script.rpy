@@ -120,36 +120,35 @@ label room_choice:
             "Let's look in the wardrobe."
 
             scene bg wardrobe
-            call screen hoverable_wardrobe
-            label wardrobe_choice:
-                menu:
-                    "Check hanging clothes":
-                        "You go through hanger to hanger inspecting all the pockets of each cloth."
-                        "You find a small wallet, with only the essentials."
+            label hoverable_wardrobe:
+                call screen hoverable_wardrobe
+            label hanging_clothes:
+                "You go through hanger to hanger inspecting all the pockets of each cloth."
+                "You find a small wallet, with only the essentials."
 
-                        p "Two expired credit cards, some cash and an ID"
-                        p "It seems to be the most recent one, this should work"
-                        p "Now, where is the Birth Certificate?"
-                        jump wardrobe_choice
-                    "Check shoe boxes":
+                p "Two expired credit cards, some cash and an ID"
+                p "It seems to be the most recent one, this should work"
+                p "Now, where is the Birth Certificate?"
+                jump hoverable_wardrobe
 
-                        "There are shoe boxes piled at the bottom of the wardrobe."
-                        "Most of them have their right pair of shoes, others have pictures."
+            label shoeboxes:
+                "There are shoe boxes piled at the bottom of the wardrobe."
+                "Most of them have their right pair of shoes, others have pictures."
 
-                        p "Aaand it's here"
-                        p "Those were the essentials to start the legal procedure"
+                p "Aaand it's here"
+                p "Those were the essentials to start the legal procedure"
 
-                        "Nothing good comes from personal interest and wanting money between the family, but you are on the road now."
+                "Nothing good comes from personal interest and wanting money between the family, but you are on the road now."
 
-                        p "Whatever gets me out of these conflicts, this isn't even beneficial for me"
-                        p "The costs of the lawyer is almost the same amount of my heirloom"
+                p "Whatever gets me out of these conflicts, this isn't even beneficial for me"
+                p "The costs of the lawyer is almost the same amount of my heirloom"
 
-                        "sighs"
+                "sighs"
+                jump hoverable_wardrobe
 
-                    "Check drawers":
-
-                        "Lots of trinkets, nothing of interest here."
-                        jump wardrobe_choice
+            label drawer:
+                "Lots of trinkets, nothing of interest here."
+                jump hoverable_wardrobe
 
         "Kitchen":
             jump room_choice
