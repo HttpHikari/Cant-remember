@@ -1,12 +1,12 @@
-﻿define p = Character("Protagonist", who_color="#728172")
-define t = Character("Taxidriver")
+﻿define p = Character("Stephen", who_color="#494f9b")
+define t = Character("Taxidriver", who_color="#9b6349")
 image bg taxi back = im.Scale("bg taxi back.jpg",1920 ,1080 )
 image bg house front = im.Scale("bg house front.jpg",1920 ,1080 )
 image bg house livingroom = im.Scale("bg house livingroom.png",1920 ,1080 )
 image bg bedroom = im.Scale("bg bedroom.jpg",1920 ,1080 )
 image bg wardrobe = im.Scale("bg wardrobe.jpg",1920 ,1080 )
 image keys = im.Scale("keys.png", 200, 200)
-
+image phone = im.Scale("phone.png", 364,417)
 label start:
 
     scene bg taxi back
@@ -39,11 +39,14 @@ menu:
     "What should i do?"
     "Check keys":
         show keys:
-        xalign: 0.5
-        yalign: 1.0
+            xalign 0.5
+            yalign 0.5
         "Yes, I have both of my keys and the “sweet home” keys"
 
     "Check phone":
+        show phone:
+            xalign 0.5
+            yalign 0.5
         "I almost forgot to tell Olie I am already here"
     
         
@@ -105,7 +108,7 @@ label room_choice:
 
             show protagonist neutral at right
 
-            p "That little blue room"   #Aquel cuartito azul. Mención o algo así? 
+            p "That little blue room"
             p "Even after all these years, you are surprised how that nickname still sticks in your head."
 
             p "no need to investigate a lot here, I guess I know where to search"
@@ -117,7 +120,7 @@ label room_choice:
             "Let's look in the wardrobe."
 
             scene bg wardrobe
-
+            call screen hoverable_wardrobe
             label wardrobe_choice:
                 menu:
                     "Check hanging clothes":
