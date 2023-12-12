@@ -1,14 +1,10 @@
-﻿define p = Character("Stephen", who_color="#494f9b")
-define t = Character("Taxidriver", who_color="#9b6349")
-image bg taxi back = im.Scale("bg taxi back.jpg",1920 ,1080 )
-image bg house front = im.Scale("bg house front.jpg",1920 ,1080 )
-image bg house livingroom = im.Scale("bg house livingroom.png",1920 ,1080 )
-image bg bedroom = im.Scale("bg bedroom.jpg",1920 ,1080 )
-image bg wardrobe = im.Scale("bg wardrobe.jpg",1920 ,1080 )
-image keys = im.Scale("keys.png", 200, 200)
-image phone = im.Scale("phone.png", 364,417)
+﻿define p = Character("protagonist", who_color="#494f9b")
+define t = Character("taxidriver", who_color="#9b6349")
+
 label start:
 
+#play music "sunflower-slow-drag.ogg" fadeout 1
+ 
     scene bg taxi back
     with fade
     "You've been traveling in a taxi for 15 minutes and you still haven't reached your destination."
@@ -17,13 +13,15 @@ label start:
 
     p "I don't wanna think how much the trip is gonna be"
 
-    show Taxidriver at left
+    show taxidriver at left
 
     t "It will be $150"
     p "Thank you, here is the total, check it to be sure"
     t "You are welcome" 
 
-    hide Taxidriver
+#stop music fadeout 1
+ 
+    hide taxidriver
 label house_outside:
 
     "When you get out of the car, the weight of the memories falls on you."
@@ -48,8 +46,6 @@ menu:
             xalign 0.5
             yalign 0.5
         "I almost forgot to tell Olie I am already here"
-    
-        
 
 label enter_house:
 
@@ -60,7 +56,6 @@ label enter_house:
     show protagonist closed eyes at right
     show protagonist opened eyes at right
   
-
     "Since you have some time, take the opportunity to look around the place a little."
 
     show protagonist neutral at right
@@ -69,8 +64,6 @@ label livingroom:
     menu:
         "Let´s see:"
         "The centerpiece":
-
-            scene bg house livingroom
 
             p "I remember the days my aunt told me and my cousins to not touch this thing"
             p "now I look at this and it's just a glass bowl with shiny rocks, nothing interesting anymore"

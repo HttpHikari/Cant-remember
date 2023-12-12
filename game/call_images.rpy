@@ -1,0 +1,8 @@
+image bg taxi back = im.Scale("bg taxi back.jpg",1920 ,1080 )
+image bg house front = im.Scale("bg house front.jpg",1920 ,1080 )
+image bg house livingroom = im.Scale("bg house livingroom.png", 1920, 1080 )
+image bg bedroom = im.Scale("bg bedroom.jpg", 1920, 1080 )
+image bg wardrobe = im.Scale("bg wardrobe.jpg", 1920, 1080 )
+image bg kitchen = im.Scale("bg kitchen.jpg", 1920, 1080)
+image keys = im.Scale("keys.png", 200, 200)
+image phone = im.Scale("phone.png", 364,417)
