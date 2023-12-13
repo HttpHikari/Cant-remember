@@ -6,3 +6,6 @@ image bg wardrobe = im.Scale("bg wardrobe.jpg", 1920, 1080 )
 image bg kitchen = im.Scale("bg kitchen.jpg", 1920, 1080)
 image keys = im.Scale("keys.png", 200, 200)
 image phone = im.Scale("phone.png", 364,417)
+
+image shoebox_unhover = im.Scale("shoebox unhover.png", 800, 800)
+image shoebox_hovered = im.Scale("shoebox hovered.png", 400, 400)

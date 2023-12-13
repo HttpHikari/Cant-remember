@@ -3,7 +3,7 @@ define t = Character("taxidriver", who_color="#9b6349")
 
 label start:
 
-#play music "sunflower-slow-drag.ogg" fadeout 1
+    play music "Past sadness.ogg" fadeout 1
  
     scene bg taxi back
     with fade
@@ -19,7 +19,7 @@ label start:
     p "Thank you, here is the total, check it to be sure"
     t "You are welcome" 
 
-#stop music fadeout 1
+    stop music fadeout 1
  
     hide taxidriver
 label house_outside:
@@ -40,25 +40,14 @@ menu:
             xalign 0.5
             yalign 0.5
         "Yes, I have both of my keys and the “sweet home” keys"
+        jump enter_house
 
     "Check phone":
         show phone:
             xalign 0.5
             yalign 0.5
         "I almost forgot to tell Olie I am already here"
-
-label enter_house:
-
-    scene bg house livingroom
-
-    "At first glance when you enter you can see dust everywhere, but still tidy, still in those past days."
-
-    show protagonist closed eyes at right
-    show protagonist opened eyes at right
-  
-    "Since you have some time, take the opportunity to look around the place a little."
-
-    show protagonist neutral at right
+        jump enter_house
 
 label livingroom:
     menu:
@@ -84,6 +73,9 @@ label livingroom:
             p "These in particular make you smile."
 
 label room_choice:
+
+    scene bg house livingroom
+
     show protagonist opened eyes at right
     "After having some time to organize your thoughts"
     "you decide it's time to look around the documents you have to get."
@@ -92,7 +84,7 @@ label room_choice:
     p "Old man stuff"
 
     menu:
-        "Where should I go first?"
+        "Where should I go?"
         "Bedroom":
             scene bg bedroom
 
@@ -137,13 +129,14 @@ label room_choice:
                 p "The costs of the lawyer is almost the same amount of my heirloom"
 
                 "sighs"
-                jump hoverable_wardrobe
+                jump room_choice
 
             label drawer:
                 "Lots of trinkets, nothing of interest here."
                 jump hoverable_wardrobe
 
         "Kitchen":
+
             jump room_choice
 
         "Go outside":
