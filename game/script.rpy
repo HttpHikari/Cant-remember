@@ -3,7 +3,7 @@ define t = Character("taxidriver", who_color="#9b6349")
 
 label start:
 
-    play music "Past sadness.ogg" fadeout 1
+    play music "Past sadness.ogg" volume 0.5 fadeout 1
  
     scene bg taxi back
     with fade
@@ -18,8 +18,6 @@ label start:
     t "It will be $150"
     p "Thank you, here is the total, check it to be sure"
     t "You are welcome" 
-
-    stop music fadeout 1
  
     hide taxidriver
 label house_outside:
@@ -40,6 +38,7 @@ menu:
             xalign 0.5
             yalign 0.5
         "Yes, I have both of my keys and the “sweet home” keys"
+        play audio "blip.ogg"
         jump enter_house
 
     "Check phone":
@@ -75,7 +74,7 @@ label livingroom:
 label room_choice:
 
     scene bg house livingroom
-
+    stop music fadeout 1
     show protagonist opened eyes at right
     "After having some time to organize your thoughts"
     "you decide it's time to look around the documents you have to get."

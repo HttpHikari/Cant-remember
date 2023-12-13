@@ -28,10 +28,9 @@ style gui_text:
 style button:
     properties gui.button_properties("button")
 
-style button_text is gui_text:
-    properties gui.text_properties("button")
-    yalign 0.5
-
+style choice_button is default:
+    properties gui.button_properties("choice_button")
+    activate_sound "blip.ogg"
 
 style label_text is gui_text:
     properties gui.text_properties("label", accent=True)
