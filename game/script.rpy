@@ -95,7 +95,7 @@ label room_choice:
             jump enter_kitchen
 
         "Go outside":
-            jump room_choice
+            jump go_oustide
 
             "Now i can go"
 

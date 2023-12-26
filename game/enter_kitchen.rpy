@@ -11,7 +11,8 @@ label enter_kitchen:
 
     hide protagonist neutral
 
-    "Your relatives send you to not only look for all the paperwork, also clean, they´re looking to use this house as a furnished rental."
+    "Your relatives send you to not only look for all the paperwork, also clean"
+    "they´re looking to use this house for rent."
     "This isn´t your thing, but giving a hand is no big deal"
 
     show protagonist opened eyes
@@ -19,9 +20,17 @@ label enter_kitchen:
     p "This way they should not look after another house and mourn with less thoughts about him"
         
     "That´s what you say to convince yourself."
-
+    
+    scene bg house front
     show protagonist closed eyes
 
     "Keeping good memories of them is the only thing you can do now."
     
     show protagonist neutral 
+
+    p "I have everything I need, let´s call it a day and head home"
+
+    "Thinking about talking to your relatives makes you wanna throw up."
+    "But that does happen to everyone right?"
+
+
