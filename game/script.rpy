@@ -1,6 +1,10 @@
 ﻿define p = Character("protagonist", who_color="#494f9b")
 define t = Character("taxidriver", who_color="#9b6349")
 
+define true_points = 0
+define void_points = 0
+define neutral_points = 0
+
 label start:
 
     play music "Past sadness.ogg" volume 0.5 fadeout 1
@@ -15,9 +19,9 @@ label start:
 
     show taxidriver at left
 
-    t "It will be $340"
+    t "It will be $4300"
     p "Thank you, here is the total, check it to be sure"
-    t "You are welcome" 
+    t "It´s ok, you´re welcome" 
  
     hide taxidriver
 label house_outside:
@@ -38,7 +42,6 @@ menu:
             xalign 0.5
             yalign 0.5
         "Yes, I have both of my keys and the “sweet home” keys"
-        play audio "blip.ogg"
         jump enter_house
 
     "Check phone":
@@ -52,20 +55,29 @@ label livingroom:
     menu:
         "Let´s see:"
         "The centerpiece":
-
+            show protagonist opened eyes at center
             p "I remember the days my aunt told me and my cousins to not touch this thing"
             p "now I look at this and it's just a glass bowl with shiny rocks, nothing interesting anymore"
             jump livingroom
         
         "The pictures on the wall":
-
+            show protagonist opened eyes at center
             p "Lots of nice memories frozen, some of them I can't recognize, parts of the family I didn't get to know"
             jump livingroom
 
         "The showcase": 
 
+            show cat 1:
+                xalign 0.5
+                yalign 0.5
             p "Cat shaped souvenirs from different cities around the world."
+            show cat 2:
+                xalign 0.5
+                yalign 0.5
             p "There are in so many colors and styles."
+            show cat 3:
+                xalign 0.5
+                yalign 0.5
 
             show protagonist smiles at right
 
@@ -96,8 +108,6 @@ label room_choice:
 
         "Go outside":
             jump go_oustide
-
-            "Now i can go"
 
 
 
