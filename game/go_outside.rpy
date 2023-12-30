@@ -18,6 +18,14 @@ label go_oustide:
         "Walk away and leave everything to the lawyer":
 
             p "Yes, telling my family that my lawyer has everything might be the best option. They can negociate everything with her"
+            nvle "A wise decision to take"
+            nvle "Begin diplomatic was worth it,they took it kinda bad at first but acepted it like adults"
+            nvle "Years later both parts could sell the house for a fair amount and divided their ways"
+            nvle "You don´t talk to them anymore, hopes that they´re fine now"
+            
+            nvl clear
+            
+            nvle "A paceful decision, a paceful life"
             
 
         "Call and tell your cousin you found the certificates":
@@ -39,8 +47,16 @@ label go_oustide:
 
             "Let´s go home and think about it later"
 
-            jump protagonist_home
+            show bg protagonist house
 
+            nvle "Giving up your share was a horrible idea, to toe the line, now you have it worse"
+            nvle "All the holidays are the same, just a hollow day with people who keeps telling what you did was the best in that moment"
+            nvle "You used to feel in debt with them, knew how it hurt to lose someone close and dear"
+            nvle "The thought of leaving and keep a life without them is confusing"
+            
+            nvl clear
+            
+            nvle "Better luck next time, keep trying"
         
         "...Do I really care about this?":
 
@@ -63,3 +79,13 @@ label go_oustide:
             "Is this the best option? You don´t really know"
             "You will find it out in the next years"
             
+            show bg protagonist house
+
+            nvle "Such a funny thought, remembering all those family conflicts"
+            nvle "You don´t talk to them now, time keeps going"
+            nvle "Things didn´t either good or bad, you just don´t talk to them anymore"
+            
+            nvl clear
+            
+            nvle "Everything is fine now."
+ 

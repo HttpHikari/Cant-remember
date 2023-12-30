@@ -10,7 +10,7 @@ label enter_bedroom:
     p "That little blue room"
     p "Even after all these years, you are surprised how that nickname still sticks in your head."
 
-    p "no need to investigate a lot here, I guess I know where to search"
+    p "No need to investigate a lot here, I guess I know where to search"
             
     p "If you were someone closer to him, you might understand all the pictures and history this little place has to tell."
     show protagonist closed eyes at right
@@ -41,9 +41,14 @@ label enter_bedroom:
 
         p "Whatever gets me out of these conflicts, this isn't even beneficial for me"
         p "The costs of the lawyer is almost the same amount of my heirloom"
-
-        "sighs"
-
         p "I should check the kitchen..."
 
         jump enter_kitchen
+    
+    label drawer:
+        "Lots of trinkets, nothing of interest here."
+        jump hoverable_wardrobe
+
+        "*sighs*"
+
+        

@@ -1,9 +1,6 @@
-﻿define p = Character("protagonist", who_color="#494f9b")
-define t = Character("taxidriver", who_color="#9b6349")
-
-define true_points = 0
-define void_points = 0
-define neutral_points = 0
+﻿define p = Character("Protagonist", who_color="#494f9b")
+define t = Character("Taxi Driver", who_color="#9b6349")
+define nvle = Character("Protagonist", color="#253d7e", kind=nvl)
 
 label start:
 
@@ -21,7 +18,7 @@ label start:
 
     t "It will be $4300"
     p "Thank you, here is the total, check it to be sure"
-    t "It´s ok, you´re welcome" 
+    t "It's ok, you're welcome" 
  
     hide taxidriver
 label house_outside:
@@ -36,7 +33,7 @@ label house_outside:
 
     show protagonist opened eyes at right
 menu:
-    "What should i do?"
+    "What should I do?"
     "Check keys":
         show keys:
             xalign 0.5
@@ -53,11 +50,11 @@ menu:
 
 label livingroom:
     menu:
-        "Let´s see:"
+        "Let's see:"
         "The centerpiece":
             show protagonist opened eyes at center
             p "I remember the days my aunt told me and my cousins to not touch this thing"
-            p "now I look at this and it's just a glass bowl with shiny rocks, nothing interesting anymore"
+            p "Now I look at this and it's just a glass bowl with shiny rocks, nothing interesting anymore"
             jump livingroom
         
         "The pictures on the wall":
@@ -67,17 +64,20 @@ label livingroom:
 
         "The showcase": 
 
-            show cat 1:
+            show cat_1:
+                xalign 0.25
+                yalign 0.5
+            show cat_2:
                 xalign 0.5
                 yalign 0.5
+            show cat_3:
+                xalign 0.75
+                yalign 0.5
+
             p "Cat shaped souvenirs from different cities around the world."
-            show cat 2:
-                xalign 0.5
-                yalign 0.5
+           
             p "There are in so many colors and styles."
-            show cat 3:
-                xalign 0.5
-                yalign 0.5
+            
 
             show protagonist smiles at right
 
@@ -86,22 +86,17 @@ label livingroom:
 label room_choice:
 
     scene bg house livingroom
-    stop music fadeout 1
     show protagonist opened eyes at right
     "After having some time to organize your thoughts"
-    "you decide it's time to look around the documents you have to get."
+    "You decide it's time to look around the documents you have to get."
 
-    p "Well even if I didn´t know him very well, I have the hunch he was the kind of old man who kept money under the couch and jewelry in a cardbox"
+    p "Well even if I didn't know him very well, I have the hunch he was the kind of old man who kept money under the couch and jewelry in a cardbox"
     p "Old man stuff"
 
     menu:
         "Where should I go?"
         "Bedroom":
             jump enter_bedroom
-
-            label drawer:
-                "Lots of trinkets, nothing of interest here."
-                jump hoverable_wardrobe
 
         "Kitchen":
             jump enter_kitchen
